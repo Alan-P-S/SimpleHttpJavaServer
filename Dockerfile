@@ -6,6 +6,6 @@ RUN javac Server.java
 
 FROM eclipse-temurin:17-jre-alpine 
 WORKDIR /app
-COPY --from=build /Server.class .
+COPY --from=build /app/*.class .
 EXPOSE 8080
 CMD ["java","Server"]
