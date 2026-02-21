@@ -4,7 +4,7 @@ RUN javac Server.java
 
 
 
-FROM eclipse-temurin::17-jre-alphine 
+FROM eclipse-temurin:17-jre-alphine 
 WORKDIR /app
 COPY --from=build /Server.class .
 EXPOSE 8080
